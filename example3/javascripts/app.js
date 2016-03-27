@@ -10,13 +10,18 @@ var main = function() {
 	$("body").append($content);
 
 	// slide the content down for two seconds
-	$content.slideDown(2000);
+	// and then execute the callback which contains
+	// the second contact
+	$content.slideDown(2000, function() {
+		// append the second content to the body
+		$("body").append($moreContent);
 
-	// append the second content to the body
-	$("body").append($moreContent);
+		// fade in the second content
+		$moreContent.fadeIn();
+	});
 
-	// fade in the second content
-	$moreContent.fadeIn();
-}
+	
+	
+};
 
 $(document).ready(main);
