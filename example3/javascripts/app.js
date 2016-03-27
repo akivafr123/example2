@@ -2,45 +2,21 @@
 var main = function() {
 	"use strict";
 
-	var $newUL = $("<ul>");
-	var $newParagraphElement = $("<p>");
-	var $listItemOne = $("<li>").text("this is the first list item");
-	var $listItemTwo = $("<li>").text("this is the second list item");
-	var $listItemThree = $("<li>").text("this is the third list item");
+	// create and hide our content as a div
+	var $content = $("<div>Hello World!</div>").hide();
+	var $moreContent = $("<div>Goodbye World!</div>").hide();
 
-	$newUL.append($listItemOne);
-	$newUL.append($listItemTwo);
-	$newUL.append($listItemThree);
-	$("main").append($newUL);
+	// append the content to the body element
+	$("body").append($content);
 
-	var $footerfirstchild = $("<p>").text("I'm the first child of the footer!");
-	$("footer").prepend($footerfirstchild);
+	// slide the content down for two seconds
+	$content.slideDown(2000);
 
-	// this is the equivalent to the previous line:
-	// $footerfirstchild.appendTo($("footer"));
+	// append the second content to the body
+	$("body").append($moreContent);
 
-	$newParagraphElement.text("this is a paragraph");
-
-	$("footer").append($newParagraphElement);
-
-	// remove all children from the list we created previously
-	// comment this line out to see them
-	$newUL.empty();
-
-	// this will remove the footer paragraph from the DOM
-	$("footer p").on("click", function(event) {
-		$("footer p").fadeOut();
-	} );
-
-	$("body h1").on("click", function(event) {
-		$("footer p").fadeIn();
-	});
-
-	
-
-	
+	// fade in the second content
+	$moreContent.fadeIn();
 }
-
-
 
 $(document).ready(main);
