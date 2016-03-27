@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 855px;
+	background: beige;
+}
+
+.comment-input {
+	width: 285px;
+	float: left;
+}
+
+.comments {
+	width: 570px;
+	border-radius: 10px;
+	float: right;
+}
+
+.comments p:nth-child(even) {
+	background: lavender;
+
+}
+
+.comments p:nth-child(odd) {
+	background: gainsboro;
+}
+
+header h3 {
+	float: right;
+	width: 570px;
+}
+
+header h1 {
+	float: left;
+	width: 285px;
+}
+
+header {
+	overflow: auto;
+}
+
+main {
+	overflow: auto;
+}
+
+footer {
+	margin: 50px;
+	padding: 10px;
+}
+
+p {
+	margin: 10px;
+}
+
+input {
+	border: 5px solid dodgerblue;
+}
+
