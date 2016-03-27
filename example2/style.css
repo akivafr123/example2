@@ -59,3 +59,9 @@ input {
 	border: 5px solid dodgerblue;
 }
 
+.comment-input button:hover {
+	cursor: pointer;
+}
+
+
+
